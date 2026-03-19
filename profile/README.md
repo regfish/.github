@@ -1,30 +1,54 @@
-# 👋 Welcome to Regfish!
+<h1 align="center">regfish</h1>
 
-We’re delighted to have you here! At Regfish, we’re passionate about making DNS and TLS automation as smooth as possible. We’re committed to supporting developers and system administrators alike with open-source tools that simplify DNS management. By contributing to the open-source community, we aim to foster collaboration, share expertise, and help drive innovation forward.
+<p align="center"><strong>API-first automation for domains, DNS, and TLS.</strong></p>
+<p align="center">From DNS record changes to certificate issuance and unattended renewals.</p>
 
-## 🚀 Our Projects and Plugins
+<p align="center">
+  <a href="https://regfish.com/docs">Developer Hub</a> |
+  <a href="https://regfish.com/docs/dns">DNS API</a> |
+  <a href="https://regfish.com/docs/tls">TLS API</a> |
+  <a href="https://regfish.com/docs/recipes">Recipes</a>
+</p>
 
-Our work revolves around creating robust DNS plugins that make automation and integration with various tools a breeze. Here’s a look at some of our key projects:
+regfish has been building domain, DNS, and TLS infrastructure since 2002. On GitHub we publish the open-source building blocks around our APIs: clients, integrations, and utilities that turn DNS changes and certificate workflows into something you can actually automate.
 
-- **[regfish/regfish-dnsapi-go](https://github.com/regfish/regfish-dnsapi-go)** - Our official Golang library for the Regfish DNS API, making DNS management seamless and accessible.
-- **[libdns](https://github.com/libdns/regfish)** - A flexible, easy-to-use Go client that standardizes interactions across multiple DNS providers.
-- **[caddy-dns](https://github.com/caddy-dns/regfish)** - A Caddy plugin that leverages our DNS capabilities to streamline TLS certificate management and automate secure connections.
-- **[go-acme/lego](https://github.com/go-acme/lego)** - A Let’s Encrypt ACME client we’ve enhanced with a plugin to automate certificate renewals for our DNS solutions.
-- **[AnalogJ/lexicon](https://github.com/AnalogJ/lexicon)** - A Python project offering a unified API that integrates a wide variety of DNS providers, designed to make DNS management simple.
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <strong><a href="https://regfish.com/docs">Developer Hub</a></strong><br />
+      The central entry point for the regfish API platform, including authentication, API references, schemas, and next steps.
+    </td>
+    <td valign="top" width="50%">
+      <strong><a href="https://regfish.com/docs/recipes">Recipes</a></strong><br />
+      Step-by-step workflows for common DNS and TLS tasks, from safe DNS updates to explicit renewal and reissue cycles.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%">
+      <strong><a href="https://regfish.com/docs/dns">DNS API</a></strong><br />
+      Read, create, update, and delete DNS records for automated zone and validation management.
+    </td>
+    <td valign="top" width="50%">
+      <strong><a href="https://regfish.com/docs/tls">TLS API</a></strong><br />
+      Order, manage, revoke, and download TLS certificates programmatically.
+    </td>
+  </tr>
+</table>
 
-## 🌍 Why Open Source Matters to Us
+## Open source that ships with the platform
 
-Open source is at the heart of technological progress, and we’re honored to be a part of that journey. Working with the GitHub community allows us to create flexible, scalable solutions that benefit users around the world. Through our projects, we aim to provide developers with reliable, well-documented, and frequently updated plugins and integrations across multiple platforms and tools.
+- [certbro](https://github.com/regfish/certbro) is our open-source Linux CLI built on top of the regfish DNS API and TLS API. It provisions `dns-cname-token` validation records, downloads issued certificates, rotates keys, deploys stable PEM paths, and keeps unattended renewals manageable on real servers.
+- [regfish-dnsapi-go](https://github.com/regfish/regfish-dnsapi-go) is the official Go client for the regfish DNS API.
+- [libdns/regfish](https://github.com/libdns/regfish) brings regfish DNS into the `libdns` ecosystem.
+- [caddy-dns/regfish](https://github.com/caddy-dns/regfish) adds regfish as a DNS provider for Caddy's ACME DNS challenge flow.
+- We also maintain integrations for tools such as [lego](https://github.com/go-acme/lego) and [Lexicon](https://github.com/AnalogJ/lexicon), so regfish fits into existing DNS and TLS stacks.
 
-## 💡 Contribute to Regfish
+## Good starting points
 
-Are you interested in contributing? Regfish offers a fully [documented](https://regfish.readme.io/) DNS Automation API that’s open to all! Whether you’re looking to submit your code or build on top of our solutions, we’d love to see what you create.
+- Want end-to-end Linux certificate automation? Start with [certbro](https://github.com/regfish/certbro) and the recipe [TLS automation with DNS API](https://regfish.com/docs/recipes/tls-automation-regfish-dns-api).
+- Need safer record changes? Pair the [DNS API](https://regfish.com/docs/dns) with [DNS record update with rollback](https://regfish.com/docs/recipes/dns-record-update-with-rollback).
+- Optimizing certificate lifecycles? See [Maximize TLS lifetime with reissue cycle](https://regfish.com/docs/recipes/maximize-tls-lifetime-with-reissue-cycle) and [TLS explicit renewal](https://regfish.com/docs/recipes/tls-explicit-renewal).
 
-## 📫 Let’s Connect!
+## Build with regfish
 
-Have a question or feedback? Don’t hesitate to reach out! Check out our GitHub repositories or connect with us directly through our website at [regfish.de](https://regfish.de).
-
----
-
-### © Regfish
-Please note, Regfish is not affiliated with or sponsored by the brands mentioned above. Our DNS plugins and integrations are independently developed to provide users with a broader range of choices and flexibility.
+If you want the raw building blocks, start in the [Developer Hub](https://regfish.com/docs). If you want copyable workflows, go straight to [Recipes](https://regfish.com/docs/recipes). If you want a ready-to-run server tool, use [certbro](https://github.com/regfish/certbro).
